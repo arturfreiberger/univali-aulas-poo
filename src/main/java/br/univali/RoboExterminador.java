@@ -2,7 +2,7 @@ package br.univali;
 
 public class RoboExterminador extends Robo {
 
-	private  Arma arma;
+	private Arma arma;
 
 	public RoboExterminador(String nome, double altura, double peso, Arma arma) {
 		super(nome, altura, peso, arma);
