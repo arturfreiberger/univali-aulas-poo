@@ -1,5 +1,7 @@
 package br.univali.aula4Artur;
 
+import java.util.Objects;
+
 public class Personagem {
 
 	private int ataque;
@@ -19,6 +21,18 @@ public class Personagem {
 
 	public void atacar(Personagem personagem) {
 		System.out.println(this.nome + " ataca " + personagem.nome);
+	}
+
+	public void atacar(Monstro monstro) {
+		int dano = this.ataque + arma.getAtaque();
+		for (String fraqueza : monstro.getFraquezas()) {
+			String elemento = arma.getElemento();
+			if (fraqueza.equals(elemento)) {
+				System.out.println("Double Damage");
+				dano = dano * 2;
+			}
+		}
+		// causar dano
 	}
 
 	public void defender() {
@@ -42,6 +56,10 @@ public class Personagem {
 
 	public void usarAcessorio(int slot) {
 		this.acessorios[slot].ativar(this);
+	}
+
+	public void equipar(Arma arma) {
+		this.arma = arma;
 	}
 
 }

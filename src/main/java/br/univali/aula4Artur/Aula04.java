@@ -1,6 +1,6 @@
 package br.univali.aula4Artur;
 
-public class Main {
+public class Aula04 {
 
 	public static void main(String[] args) {
 
